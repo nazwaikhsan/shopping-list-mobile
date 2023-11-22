@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shopping_list/screens/shoplist_form.dart';
+import 'package:shopping_list/shoplist_form.dart';
+import '../screens/list_product.dart';
 export 'shop_card.dart';
 
 class ShopCard extends StatelessWidget {
@@ -26,6 +27,13 @@ class ShopCard extends StatelessWidget {
               context,
               MaterialPageRoute(
                   builder: (context) => const ShopFormPage(),
+              ));
+          }
+          else if (item.name == "Lihat Produk"){
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const ProductPage(),
               ));
           }
         },
